@@ -1,49 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Student Portal</h1>
-    </header>
-    <main>
-        <section id="login">
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <button id="login-button">Login</button>
-            </form>
-        </section>
-        <section id="dashboard" style="display: none;">
-            <h2>Student Dashboard</h2>
-            <p>Welcome, <span id="student-name"></span>!</p>
-            <ul>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#grades">Grades</a></li>
-            </ul>
-        </section>
-        <section id="courses" style="display: none;">
-            <h2>Courses</h2>
-            <ul id="course-list"></ul>
-        </section>
-        <section id="grades" style="display: none;">
-            <h2>Grades</h2>
-            <table id="grade-table">
-                <tr>
-                    <th>Course</th>
-                    <th>Grade</th>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+<html>
+  <head>
+    <title>Food Delivery Application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .item {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Food Delivery App</h1>
+    <div class="menu">
+      <div class="item">
+        <h2>Pizza</h2>
+        <p>Price: $10.99</p>
+        <button onclick="orderFood('Pizza')">Order</button>
+      </div>
+      <div class="item">
+        <h2>Burger</h2>
+        <p>Price: $8.99</p>
+        <button onclick="orderFood('Burger')">Order</button>
+      </div>
+      <div class="item">
+        <h2>Sushi</h2>
+        <p>Price: $12.99</p>
+        <button onclick="orderFood('Sushi')">Order</button>
+      </div>
+    </div>
+    <script>
+      function orderFood(food) {
+        alert(`You have ordered ${food}. Thank you!`);
+      }
+    </script>
+  </body>
 </html>
-
